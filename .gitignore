@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# eclipse stuff
+.project
+.pydevproject
+
 # Distribution / packaging
 .Python
 build/
