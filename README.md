@@ -25,7 +25,11 @@ cd /path/to/dockerfiles/prost
 ```
 
 In the above example, it is assumed that ``/path/to/dockerfile`` is a valid path on the file system where the project files will be cloned into.
-In this directory should be contained a ``Dockerfile`` with instructions to build the Docker image, ``prost.sh`` file that calls PROST from the command line, a ``rddlsim.py`` file that runs ``prost.sh`` from Python, and a ``runprost.sh`` file that you will use to run the Docker image.
+In this directory should be contained:
+- a ``Dockerfile`` with instructions to build the Docker image
+- ``prost.sh`` file that calls PROST from the command line
+- `rddlsim.py`` file that runs ``prost.sh`` from Python, and
+- ``runprost.sh`` file that you can use to automate the build and run process (described below).
 
 ### Building the Image
 
