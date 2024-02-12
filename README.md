@@ -1,4 +1,6 @@
 # pyRDDLGym-prost
-Docker files for connecting the PROST planner with pyRDDLGym.
+This repository contains the docker files for connecting the Monte-Carlo Tree Search planner [PROST](https://github.com/prost-planner/prost) with pyRDDLGym.
 
-For an overview and example usage of the Monte Carlo Tree Search [PROST](https://github.com/prost-planner/prost) planner in PyRDDLGym (for discrete state and action domains only), please see the documentation for [PROST in PyRDDLGym](https://pyrddlgym.readthedocs.io/en/latest/prost.html).
+> [!NOTE]  
+> PROST only works with finite state and action domains only.
+> If you wish to do planning for continuous state and/or action spaces, check out the [gradient-based JAX planner](https://github.com/pyrddlgym-project/pyRDDLGym-jax) or the [deep reinforcement learning wrappers](https://github.com/pyrddlgym-project/pyRDDLGym-rl).
