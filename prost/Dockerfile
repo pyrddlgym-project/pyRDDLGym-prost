@@ -47,8 +47,9 @@ RUN pip3 install --upgrade ply
 RUN pip3 install --upgrade pillow
 RUN pip3 install --upgrade numpy
 RUN pip3 install --upgrade matplotlib
-RUN pip3 install --upgrade gym
+RUN pip3 install --upgrade gymnasium
 RUN pip3 install --upgrade pygame
+RUN pip3 install --upgrade termcolor
 RUN pip3 install --upgrade requests
 
 WORKDIR /workspace
