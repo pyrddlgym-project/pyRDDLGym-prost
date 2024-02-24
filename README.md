@@ -37,21 +37,19 @@ After executing the above commands, the folder should now contain:
 To build the Docker image, you will need to install [Docker](https://docs.docker.com/get-docker/). Then, with Docker running, build the image as follows:
 
 ```shell
-docker build -t <docker name> .
+docker build -t prost .
 ```
-
-where ``<docker name>`` is the name you want to assign to the image.
 
 ### Running the Container
 
 To run a container from the built image:
 
 ```shell
-docker run --name <docker name> --mount type=bind,source=<rddl dir>,target=/RDDL prost <rounds> "<prost args>"
+docker run --name <container name> --mount type=bind,source=<rddl dir>,target=/RDDL prost <rounds> "<prost args>"
 ```
 
 where:
-- ``<docker name>`` is the name specified above during build
+- ``<container name>`` is the name of the container you want to use
 - ``<rddl dir>`` is the path of the directory containing the RDDL ``domain.rddl`` and ``instance.rddl`` files you wish to run
 - ``<rounds>`` is the number of runs/episodes/trials of optimization
 - ``<prost args>`` are the arguments to pass to PROST, whose syntax is described [here](https://github.com/pyrddlgym-project/pyRDDLGym-prost/blob/main/prost/PROST_Command_Line_Option_Notes_Thomas_Keller.txt)
@@ -59,7 +57,7 @@ where:
 After the container runs, you can then copy the files from the container to a directory ``<output dir>`` in your local filesystem for further analysis:
 
 ```shell
-docker cp <docker name>:/OUTPUTS/ <output dir>
+docker cp <container name>:/OUTPUTS/ <output dir>
 ```
 
 ### Automated Script
@@ -67,7 +65,7 @@ docker cp <docker name>:/OUTPUTS/ <output dir>
 You do not need to run the two commands described in the previous section, since we have provided a script to automate the process:
 
 ```shell
-bash runprost.sh <docker name> <rddl dir> <rounds> <prost args> <output dir>
+bash runprost.sh <container name> <rddl dir> <rounds> <prost args> <output dir>
 ```
 
 where the arguments are as described above.
