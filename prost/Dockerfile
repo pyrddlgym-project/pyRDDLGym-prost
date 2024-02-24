@@ -76,3 +76,4 @@ RUN mkdir /OUTPUTS
 ENV PROST_OUT="/OUTPUTS"
 
 ENTRYPOINT ["/bin/bash", "/workspace/pyRDDLGym/prost.sh"]
+
