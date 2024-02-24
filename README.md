@@ -24,9 +24,10 @@ git clone https://github.com/pyrddlgym-project/pyRDDLGym-prost /path/to/dockerfi
 cd /path/to/dockerfiles/prost
 ```
 
-In the above example, it is assumed that ``/path/to/dockerfile`` is a valid path on the file system where the project files will be cloned into.
-In this directory should be contained:
-- a ``Dockerfile`` with instructions to build the Docker image
+In the above example, it is assumed that ``/path/to/dockerfiles`` is a valid path on the file system where the project files will be cloned into.
+
+After executing the above commands, the folder should now contain:
+- a ``Dockerfile`` with instructions for Docker to build the image
 - ``prost.sh`` file that calls PROST from the command line
 - ``rddlsim.py`` file that runs ``prost.sh`` from Python, and
 - ``runprost.sh`` file that you can use to automate the build and run process (described below).
