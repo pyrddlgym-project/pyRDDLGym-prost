@@ -64,7 +64,7 @@ docker cp <docker name>:/OUTPUTS/ <output dir>
 
 ### Automated Script
 
-You do not need to run all the commands described above, since we have provided a script to automate the process:
+You do not need to run the two commands described in the previous section, since we have provided a script to automate the process:
 
 ```shell
 bash runprost.sh <docker name> <rddl dir> <rounds> <prost args> <output dir>
