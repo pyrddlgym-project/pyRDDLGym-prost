@@ -40,7 +40,7 @@ To build the Docker image, you will need to install [Docker](https://docs.docker
 docker build -t <docker name> .
 ```
 
-where ``<docker name>`` is the name of the image you want to build.
+where ``<docker name>`` is the name you want to assign to the image.
 
 ### Running the Container
 
