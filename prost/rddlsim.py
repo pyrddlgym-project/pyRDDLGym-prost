@@ -25,7 +25,7 @@ server = RDDLSimServer(domain_path, instance_path, numrounds=rounds, time=99999)
 server.run()
 
 # aggregate results
-round_returns = [float(round_data[-1]['reward']) for round_data in server.logs]
+round_returns = [float(round_data[-1]['round_reward']) for round_data in server.logs]
 stats = {
     'mean': np.mean(round_returns),
     'median': np.median(round_returns),
